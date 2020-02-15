@@ -2,6 +2,10 @@ package com.jpvaapi.seccion_04_intro_testrealm.application;
 
 import android.app.Application;
 
+
+import com.jpvaapi.seccion_04_intro_testrealm.models.Dog;
+import com.jpvaapi.seccion_04_intro_testrealm.models.Person;
+
 import java.util.concurrent.atomic.AtomicInteger;
 
 import io.realm.Realm;
@@ -29,11 +33,17 @@ public class MyApplication extends Application {
                 .deleteRealmIfMigrationNeeded()
                 .build();
         Realm.setDefaultConfiguration(config);
+
+        Realm realm = Realm.getInstance(config);
+        PersonID = setAtomicId(realm, Person.class);
+        DogID = setAtomicId(realm, Dog.class);
+
+        realm.close();
     }
 
     private <T extends RealmObject> AtomicInteger setAtomicId(Realm realm, Class<T> anyClass) {
         RealmResults<T> results = realm.where(anyClass).findAll();
-        return (results.size() > 0) ? new AtomicInteger(results.max("id").intValue()) : new AtomicInteger();
+        return (results.size() > 0) ? new AtomicInteger(results.max("Id").intValue()) : new AtomicInteger();
     }
 }
 
