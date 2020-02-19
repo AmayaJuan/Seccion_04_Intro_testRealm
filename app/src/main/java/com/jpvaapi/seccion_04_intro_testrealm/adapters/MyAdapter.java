@@ -46,11 +46,11 @@ public class MyAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        ViewHolder vh:
+        ViewHolder vh;
         if (convertView == null) {
             convertView = LayoutInflater.from(context).inflate(layout, null);
             vh = new ViewHolder();
-            vh.id = convertView.findViewById(R.id.textVIewId);
+            vh.id = convertView.findViewById(R.id.textViewId);
             vh.name = convertView.findViewById(R.id.textViewName);
             vh.dogs = convertView.findViewById(R.id.textViewDogs);
             convertView.setTag(vh);

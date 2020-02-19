@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.jpvaapi.seccion_04_intro_testrealm.R;
 import com.jpvaapi.seccion_04_intro_testrealm.adapters.MyAdapter;
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements RealmChangeListen
         listView = findViewById(R.id.listView);
 
         people = getAllPeople();
-        people.addChangetListener(this);
+        people.addChangeListener(this);
 
         adapter = new MyAdapter(people, R.layout.list_item_view, this);
 
@@ -69,7 +70,7 @@ public class MainActivity extends AppCompatActivity implements RealmChangeListen
                 removeAll();
                 return true;
             default:
-                return super.onOptionsItemSelected(item):
+                return super.onOptionsItemSelected(item);
         }
     }
 

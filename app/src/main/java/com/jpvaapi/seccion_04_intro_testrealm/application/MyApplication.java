@@ -26,7 +26,7 @@ public class MyApplication extends Application {
         super.onCreate();
 
         //Initialize Realm
-        Realm.init(getApplicationContext());
+        //Realm.init(getApplicationContext());
         //create your Realm configuration
         RealmConfiguration config = new RealmConfiguration
                 .Builder()
