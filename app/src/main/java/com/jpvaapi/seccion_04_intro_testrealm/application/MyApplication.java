@@ -2,7 +2,6 @@ package com.jpvaapi.seccion_04_intro_testrealm.application;
 
 import android.app.Application;
 
-
 import com.jpvaapi.seccion_04_intro_testrealm.models.Dog;
 import com.jpvaapi.seccion_04_intro_testrealm.models.Person;
 
