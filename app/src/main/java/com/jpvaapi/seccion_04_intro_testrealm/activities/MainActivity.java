@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements RealmChangeListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Realm.init(this);
         realm = Realm.getDefaultInstance();
         listView = findViewById(R.id.listView);
 
