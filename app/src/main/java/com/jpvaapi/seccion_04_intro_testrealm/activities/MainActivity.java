@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import com.jpvaapi.seccion_04_intro_testrealm.R;
 import com.jpvaapi.seccion_04_intro_testrealm.adapters.MyAdapter;
